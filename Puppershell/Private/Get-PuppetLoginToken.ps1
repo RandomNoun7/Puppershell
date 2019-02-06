@@ -4,7 +4,7 @@ function Get-PuppetLoginToken {
         [pscredential]$credential,
         [string]$server,
         [int]$port = 4433,
-        [switch]$ignoreSSL,
+        [switch]$SkipCertificateCheck,
         [string]$lifetime
     )
 
@@ -26,7 +26,7 @@ function Get-PuppetLoginToken {
             method    = 'Post'
             server    = $server
             port      = $port
-            ignoreSSL = $ignoreSSL
+            SkipCertificateCheck = $SkipCertificateCheck
         }
 
         if(-not [string]::IsNullOrEmpty($lifetime)) {

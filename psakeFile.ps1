@@ -3,6 +3,8 @@ properties {
     # This modifies the default behavior from the "Build" task
     # in the PowerShellBuild shared psake task module
     # $CompileModule = $false
+
+    $CompileModule = $true
 }
 
 task default
